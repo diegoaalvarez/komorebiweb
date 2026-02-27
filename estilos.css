@@ -49,5 +49,5 @@ p{
 }
 
 audio {
-    filter: invert(1) hue-rotate(180deg);
+    color-scheme: dark;
 }
