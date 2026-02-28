@@ -9,20 +9,35 @@
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
-<body>
-	<video autoplay muted loop class="videofondo">
-		<source src="material/Video_Fondo.webm" type="video/webm">
-		Tu navegador no soporta el formato de video
+<body onclick="startAudio()">
+	<video autoplay="true" muted loop class="videofondo">
+		<source src="assets/video.webm" type="video/webm">
+		<!-- Tu navegador no soporta el formato de video -->
 	</video>
 
-	<audio controls loop autoplay>
-		<source src="material/freepik-echo-bloom.mp3" type="audio/mp3">
+	<audio preload="auto" loop autoplay>
+		<source src="assets/song.ogg" type="audio/ogg">
 		Tu navegador no soporta el elemento de audio
 	</audio>
 
 
 	<h1 class="textoconstruccion">EN CONSTRUCCIÓN</h1>
-	
+
+<script>
+let audio = document.getElementsByTagName("audio")[0];
+if(audio)
+	audio.volume = 0.2;
+
+function startAudio(){
+	if(audio){
+		let promise = audio.play();
+		promise.then(()=>{
+			audio.removeEventListener("onclick", startAudio);
+		});
+	}
+}
+
+</script>
 </body>
 </html>
 
