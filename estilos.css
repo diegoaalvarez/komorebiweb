@@ -35,11 +35,20 @@ p{
 }
 
 .textoconstruccion{
+    transition-property: color transform text-shadow;
+    transition-duration: 0.5s;
+
+
     margin-top: 70vh;
     font-size: 60px;
     letter-spacing: 4px;
-    color: #00DF82;
+    color: #43cacf;
     font-size: clamp(1.2rem, 6vw, 3rem);
+}
+
+.textoconstruccion:hover{
+    color: #d4ffed;
+    text-shadow: 0 0 30px #d4ffed
 }
 
 .videofondo{
