@@ -44,10 +44,10 @@ document.body.onpointermove = (event)=>{
 	
 	const { clientX, clientY } = event;
 	const movementAmmount = 0.4;
-	let offsetX = -(clientX-clientArea.width/2)*movementAmmount;
-	let offsetY = -(clientY-clientArea.height/2)*movementAmmount;
+	let offsetX = -(clientX-clientArea.width/2)*0.4;
+	let offsetY = -(clientY-clientArea.height/2)*0.3;
 	move.animate({
-		transform: `translateX(${offsetX}px) translateY(calc(${offsetY}px + 5rem))`
+		transform: `translateX(${offsetX}px) translateY(calc(${offsetY}px))`
 
 	}, {duration: 1000, fill: "forwards"})
 
