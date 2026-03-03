@@ -52,7 +52,6 @@ function textMoveEvt(event){
 		transform: `translateX(${offsetX}px) translateY(calc(4em + ${offsetY}px + ${20*clientArea.height/clientArea.width}em))`
 
 	}, {duration: 1000, fill: "forwards"})
-	console.log(`translateY(calc(${offsetY}px + ${2*clientArea.height/clientArea.width}em))`);
 }
 document.body.onpointermove = textMoveEvt;
 /* document.body.onpointermove = (event)=>{
