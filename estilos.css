@@ -3,6 +3,7 @@ body{
     color: white;
     margin: 0;
     font-family: sans-serif;
+    overflow: hidden;
 
     /*
     background-image: url(img/fondo_test.png);
@@ -37,9 +38,9 @@ p{
 .textoconstruccion{
     transition-property: color transform text-shadow;
     transition-duration: 0.5s;
+    overflow: hidden;
 
-
-    margin-top: 70vh;
+    margin-top: 30vh;
     font-size: 60px;
     letter-spacing: 4px;
     color: #43cacf;
@@ -48,7 +49,7 @@ p{
 
 .textoconstruccion:hover{
     color: #d4ffed;
-    text-shadow: 0 0 30px #d4ffed
+    text-shadow: 0 0 30px #d4ffed, 0 0 10px #d4ffed
 }
 
 .videofondo{
