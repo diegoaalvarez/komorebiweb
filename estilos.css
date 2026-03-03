@@ -40,7 +40,7 @@ p{
     transition-duration: 0.5s;
     overflow: hidden;
 
-    margin-top: 30vh;
+    margin-top: 90vh;
     font-size: 60px;
     letter-spacing: 4px;
     color: #43cacf;
@@ -49,7 +49,7 @@ p{
 
 .textoconstruccion:hover{
     color: #d4ffed;
-    text-shadow: 0 0 30px #d4ffed, 0 0 10px #d4ffed
+    text-shadow: 0 0 8px #d4ffed, 0 0 2px #d4ffed
 }
 
 .videofondo{
