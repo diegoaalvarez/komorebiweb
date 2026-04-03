@@ -1,0 +1,190 @@
+html{
+	--color-text2: rgb(71, 185, 185);
+	--color-text1: aquamarine;
+	--color-text-lightest: rgb(214, 255, 241);
+}
+
+body{
+	/* background-color: #102530; */
+	background-image: url("/assets/bg.webp");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center top;
+	color: var(--color-text1);
+
+	font-family: "Chakra Petch", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: 500;
+
+	margin: 0;
+	padding: 0;
+
+	height: 5000px;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.NavContainer{
+	position: sticky;
+	height: 0;
+	top: 0;
+}
+
+.NavContainer nav{
+	position: absolute;
+	right: 3em;
+	top: 1em;
+	font-size: 20px;
+}
+.NavContainer nav a{
+	display: block;
+	text-align: right;
+	line-height: 1.5;
+	
+}
+.NavContainer nav a:hover{
+	color: white;
+}
+
+.TopSideLinks{
+	position: absolute;
+	left: 50px;
+	width: 100%;
+	max-width: 240px;
+}
+
+.TopSideLinks a{
+	display: block;
+	
+	font-size: 20px;
+	margin-bottom: 2em;
+	text-shadow: none;
+	transition: text-shadow 0.25s;
+}
+
+.TopSideLinks a:hover{
+	text-shadow: 0px 0px 4px var(--color-text2);
+}
+
+.TopSideLinks a div{
+	color: var(--color-text2);
+	font-weight: normal;
+}
+
+.Logo{
+	margin: 0 auto 0 auto;
+	display: block;
+	filter: drop-shadow(0px 0px 10px black);
+	opacity: 0.8;
+}
+
+.Pane{
+	background-color: rgba(6, 56, 56, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 40px;
+	backdrop-filter: blur(5px);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.885);
+	transition-property: transform backdrop-filter box-shadow background-color;
+	transition-duration: 1s;
+}
+
+.Pane:hover{
+	transform: translateY(-10px);
+	backdrop-filter: blur(20px);
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+	background-color: rgba(1, 32, 32, 0.4);
+}
+
+.SectionAbout{
+	margin: 0 auto 0 auto;
+	width: 57%;
+
+	padding: 1em 2em 100px 4em;
+	min-height: 500px;
+	box-sizing: border-box;
+}
+
+.SectionAbout .top{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	color: var(--color-text-lightest);
+}
+
+.SectionAbout h2{
+	margin-top: 2.2em;
+	margin-bottom: 1.2em;
+	text-align: center;
+	font-size: 48px;
+	font-weight: lighter;
+	letter-spacing: 0.2em;
+
+	background: linear-gradient(to right, rgb(48, 253, 219), rgb(50, 255, 101), rgb(0, 179, 149));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.SectionAbout > p{
+	font-family: "Montserrat", sans-serif;
+	text-transform: initial;
+	letter-spacing: initial;
+	letter-spacing: 0.02em;
+	word-spacing: 0.1em;
+	font-size: 18px;
+	color: var(--color-text-lightest);
+	font-weight: 500;
+	line-height: 1.8;
+	text-shadow: 0px 2px 4px black;
+}
+
+.SectionCreativity{
+	margin: 0 auto 0 auto;
+	width: 57%;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 600px;
+}
+
+.SectionCreativity h2{
+	margin-top: 1em;
+	margin-bottom: 1.2em;
+	text-align: center;
+	font-size: 48px;
+	font-weight: lighter;
+	letter-spacing: 0.2em;
+
+	background: linear-gradient(to right, rgb(56, 255, 222), rgb(50, 255, 101), rgb(0, 116, 96));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	
+}
+
+.SectionCreativity p{
+	color: var(--color-text-lightest);
+	text-align: center;
+	margin-top: 80px;
+}
+
+/* ########## Desktop ########### */
+
+.TopSideLinks{
+	top: 20vw;
+}
+
+.Logo{
+	margin-top: 22vw;
+}
+
+.SectionAbout{
+	margin-top: 30vw;
+}
+
+.SectionCreativity{
+	margin-top: 23vw;
+}
