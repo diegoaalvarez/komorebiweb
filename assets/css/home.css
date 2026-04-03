@@ -163,7 +163,14 @@ a{
 	width: 57%;
 	padding: 20px;
 	box-sizing: border-box;
-	height: 600px;
+	height: 620px;
+}
+
+.SectionCreativity > div{
+	background-image: url("/assets/creatividadTemp.png");
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: top center;
 }
 
 .SectionCreativity h2{
@@ -184,7 +191,7 @@ a{
 .SectionCreativity p{
 	color: var(--color-text-lightest);
 	text-align: center;
-	margin-top: 80px;
+	padding-top: 80px;
 }
 
 .SectionContacto{
