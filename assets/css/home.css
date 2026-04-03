@@ -1,4 +1,5 @@
 html{
+	--color-text3: rgb(80, 204, 136);
 	--color-text2: rgb(71, 185, 185);
 	--color-text1: aquamarine;
 	--color-text-lightest: rgb(214, 255, 241);
@@ -8,7 +9,7 @@ body{
 	/* background-color: #102530; */
 	background-image: url("/assets/bg.webp");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	background-position: center top;
 	color: var(--color-text1);
 
@@ -20,7 +21,7 @@ body{
 	margin: 0;
 	padding: 0;
 
-	height: 5000px;
+	height: 5175px;
 }
 
 a{
@@ -28,7 +29,10 @@ a{
 	text-decoration: none;
 }
 
+
+
 .NavContainer{
+	z-index: 1;
 	position: sticky;
 	height: 0;
 	top: 0;
@@ -64,6 +68,7 @@ a{
 	margin-bottom: 2em;
 	text-shadow: none;
 	transition: text-shadow 0.25s;
+	text-shadow: 2px 2px 4px black, -2px -2px 4px black;;
 }
 
 .TopSideLinks a:hover{
@@ -79,11 +84,22 @@ a{
 	margin: 0 auto 0 auto;
 	display: block;
 	filter: drop-shadow(0px 0px 10px black);
-	opacity: 0.8;
+	animation: LogoFrames forwards 3s infinite;
+}
+@keyframes LogoFrames{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 .Pane{
-	background-color: rgba(6, 56, 56, 0.2);
+	background-color: rgba(2, 27, 27, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 40px;
 	backdrop-filter: blur(5px);
@@ -171,6 +187,98 @@ a{
 	margin-top: 80px;
 }
 
+.SectionContacto{
+	margin: 0 6% 0 auto;
+	width: 62%;
+	height: 700px;
+}
+
+.SectionContacto h2{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 48px;
+	font-weight: lighter;
+	letter-spacing: 0.2em;
+
+	background: linear-gradient(to right, rgb(70, 255, 153), rgb(0, 144, 163));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.SectionContacto .grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+	padding: 2em;
+	gap: 2em;
+	padding-top: 0;
+}
+.SectionContacto form{
+	font-size: 24px;
+	color: var(--color-text-lightest);
+}
+input{
+	outline: none;
+	border: none;
+	background: none;
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	border-bottom: 1px solid rgba(140, 255, 236, 0.096);
+	margin-right: 1em;
+}
+input::placeholder{
+	color: inherit
+}
+.SectionContacto p{
+	padding-left: 2em;
+}
+
+
+.SectionBottom .bigText{
+	text-align: center;
+	font-size: 48px;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+
+	background: linear-gradient(to right, rgb(74, 255, 143), rgb(0, 183, 207));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.SectionBottom .flex{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 80px;
+	width: 93%;
+	margin-left: auto;
+	margin-right: auto;
+	color: rgb(147, 231, 203);
+	font-size: 20px;
+}
+.SectionBottom .middle{
+	color: var(--color-text-lightest);
+	font-size: 24px;
+	letter-spacing: 0.4em;
+}
+
+.SectionBottom .right{
+	text-align: right;
+}
+
+.Copyright{
+	position: absolute;
+	top: 5100px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0.3em;
+	font-size: 15px;
+	color: var(--color-text3);
+}
+
 /* ########## Desktop ########### */
 
 .TopSideLinks{
@@ -187,4 +295,12 @@ a{
 
 .SectionCreativity{
 	margin-top: 23vw;
+}
+
+.SectionContacto{
+	margin-top: 20vw;
+}
+
+.SectionBottom{
+	margin-top: 27vw;
 }
