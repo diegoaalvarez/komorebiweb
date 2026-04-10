@@ -8,86 +8,100 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<script defer src="/assets/js/home.js"></script>
 </head>
 <body>
 <h1 style="display:none">Komorebi Pixel</h1>
-<div class="NavContainer">
-	<nav>
-		<a href="#dirAbout">About</a>
-		<a href="#dirCreativity">Creativity</a>
-		<a href="#dirContacto">Contact</a>
-	</nav>
+
+<div id="page1" class="absolute">
+	<div id="cursorImg"></div>
+	<div id="SwitchPageBtn" onclick="switchPage()"></div>
 </div>
 
-<div class="TopSideLinks">
-	<a href="#dirAbout"> About
-		<div>Dónde nace nuestra luz</div>
-	</a>
-	<a href="#dirCreativity"> Creativity
-		<div>El brillo de nuestro trabajo</div>
-	</a>
+<div id="page2" class="absolute" style="display: none;">
+	<div class="NavContainer">
+		<nav>
+			<a onclick="scrollToMarker('About')" href="#">About</a>
+			<a onclick="scrollToMarker('Creativity') "  href="#">Creativity</a>
+			<a onclick="scrollToMarker('Contacto')"   href="#">Contact</a>
+			<a onclick="scrollToMarker('End')"   href="#">End</a>
+		</nav>
+	</div>
+
+	<div class="TopSideLinks">
+		<a onclick="scrollToMarker('About')" href="#"> About
+			<div>Dónde nace nuestra luz</div>
+		</a>
+		<a onclick="scrollToMarker('Creativity')" href="#"> Creativity
+			<div>El brillo de nuestro trabajo</div>
+		</a>
+	</div>
+
+	<div class="absolute" id="ArtDeco"></div>
+
+	<div style="height: 1px;"><!-- Needed for correct sticky position. Don't delete --></div>
+
+
+	<img class="Logo" src="/assets/logo.png" alt="Komorebi Pixel">
+
+
+	<div class="scrollMarker" id="About"></div>
+	<section class="SectionAbout Pane">
+		<div class="top">
+			<p>About</p>
+			<p>Komorebi Pixel: Donde la luz ilumina las ideas</p>
+		</div>
+		<h2>Dónde nace nuestra luz</h2>
+		<p>KOMOREBI PIXEL es un estudio creativo en expansión, con visión de consultoría creativa.<br> Combinamos pensamiento estratégico con una ejecución creativa sensible, consciente y emocionalmente inteligente.</p>
+		<p>Nacimos de la unión entre la luz y la imagen, entre lo humano y lo digital.<br> Creemos que cada idea, por pequeña que parezca, tiene la fuerza de un pixel iluminado para transformar el todo.</p>
+	</section>
+
+	<div class="scrollMarker" id="Creativity"></div>
+	<section class="SectionCreativity Pane">
+		<h2>El brillo de nuestro trabajo</h2>
+		<div>
+			<p>Creativity</p>
+		</div>
+	</section>
+
+	<div class="scrollMarker" id="Contacto"></div>
+	<section class="SectionContacto Pane">
+		<h2>Ilumina tu proyecto con nosotros</h2>
+		<form>
+			<div class="grid">
+				<input type="text" placeholder="*NOMBRE" id="name" name="name" required minlength="2" maxlength="32" pattern="^(.(?<![\x21-\x26\x28-\x2C\x2F-\x40\x7B-\x7F^_]+))*?$">
+				<input type="text" placeholder="*APELLIDO"id="sname" name="sname" required minlength="2" maxlength="32" pattern="^(.(?<![\x21-\x26\x28-\x2C\x2F-\x40\x7B-\x7F^_]+))*?$">
+				<input type="email" placeholder="*DIRECCION E-MAIL" id="email" name="email" required maxlength="64">
+				<div></div>
+				<input type="text" placeholder="NÚMERO MOVIL" id="phone" name="phone" required minlength="2" maxlength="30">
+				<input type="text" placeholder="EMPRESA" id="company" name="company" required minlength="2" maxlength="128">
+			</div>
+			
+			<label class="error" for="name"></label>
+			<label class="error" for="sname"></label>
+			<label class="error" for="email"></label>
+			<label class="error" for="phone"></label>
+
+			<p>¿Cómo podemos Ayudarte?</p>
+		</form>
+	</section>
+
+	<div class="scrollMarker" id="End"></div>
+	<section class="SectionBottom">
+		<div class="bigText">Señales desde el bosque</div>
+		<div class="flex">
+			<div>Komorebi Pixel ™</div>
+			<div class="middle">hello@komorebipixel.cl</div>
+			<div class="right">
+				<p>Aviso de privacidad</p>
+				<p>Código de ética</p>
+			</div>
+		</div>
+	</section>
+
+	<p class="Copyright">
+	Komorebi Pixel ™ 2026 | Todos los derechos reservados | Arte por: Mörkh Illustrations
+	</p>
 </div>
-
-<div style="height: 1px;"><!-- Needed for correct sticky position. Don't delete --></div>
-
-
-<img class="Logo" src="/assets/logo.png" alt="Komorebi Pixel">
-
-
-<section id="dirAbout" class="SectionAbout Pane">
-	<div class="top">
-		<p>About</p>
-		<p>Komorebi Pixel: Donde la luz ilumina las ideas</p>
-	</div>
-	<h2>Dónde nace nuestra luz</h2>
-	<p>KOMOREBI PIXEL es un estudio creativo en expansión, con visión de consultoría creativa.<br> Combinamos pensamiento estratégico con una ejecución creativa sensible, consciente y emocionalmente inteligente.</p>
-	<p>Nacimos de la unión entre la luz y la imagen, entre lo humano y lo digital.<br> Creemos que cada idea, por pequeña que parezca, tiene la fuerza de un pixel iluminado para transformar el todo.</p>
-</section>
-
-
-<section id="dirCreativity" class="SectionCreativity Pane">
-	<h2>El brillo de nuestro trabajo</h2>
-	<div>
-		<p>Creativity</p>
-	</div>
-</section>
-
-<section id="dirContacto" class="SectionContacto Pane">
-	<h2>Ilumina tu proyecto con nosotros</h2>
-	<form>
-		<div class="grid">
-			<input type="text" placeholder="*NOMBRE" id="name" name="name" required minlength="2" maxlength="32" pattern="^(.(?<![\x21-\x26\x28-\x2C\x2F-\x40\x7B-\x7F^_]+))*?$">
-			<input type="text" placeholder="*APELLIDO"id="sname" name="sname" required minlength="2" maxlength="32" pattern="^(.(?<![\x21-\x26\x28-\x2C\x2F-\x40\x7B-\x7F^_]+))*?$">
-			<input type="email" placeholder="*DIRECCION E-MAIL" id="email" name="email" required maxlength="64">
-			<div></div>
-			<input type="text" placeholder="NÚMERO MOVIL" id="phone" name="phone" required minlength="2" maxlength="30">
-			<input type="text" placeholder="EMPRESA" id="company" name="company" required minlength="2" maxlength="128">
-		</div>
-		
-		<label class="error" for="name"></label>
-		<label class="error" for="sname"></label>
-		<label class="error" for="email"></label>
-		<label class="error" for="phone"></label>
-
-		<p>¿Cómo podemos Ayudarte?</p>
-	</form>
-</section>
-
-<section class="SectionBottom">
-	<div class="bigText">Señales desde el bosque</div>
-	<div class="flex">
-		<div>Komorebi Pixel ™</div>
-		<div class="middle">hello@komorebipixel.cl</div>
-		<div class="right">
-			<p>Aviso de privacidad</p>
-			<p>Código de ética</p>
-		</div>
-	</div>
-</section>
-
-<p class="Copyright">
-Komorebi Pixel ™ 2026 | Todos los derechos reservados | Arte por: Mörkh Illustrations
-</p>
-
 </body>
 </html>
